@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'El Messiri', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f6f5f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: -20px 0 50px;
+    background-image: url('../Images/recipe2.jpg');
+    background-size: cover;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+    color: beige;
+}
+
+p {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: 12px;
+    color: beige;
+}
+
+a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.box{
+    border-radius: 10px;
+    background: linear-gradient( to bottom, rgba(120, 114, 114, 0.1) 0%, rgba(135, 42, 42, 0.1) 2%);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: absolute;
+    overflow: hidden;
+    width: 450px;
+    max-width: 140%;
+    min-height: 300px;
+    opacity: 0.8;
+}
+.container {
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: absolute;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    opacity: 0.8;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+  background: linear-gradient( to bottom, rgba(120, 114, 114, 0.1) 0%, rgba(153, 79, 79, 0.1) 2%
+  );
+}
+.form-container form {
+    background: rgb(157, 150, 150);
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBx {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}  
+input {
+      width: 100%;
+      outline: none;
+      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: #514b4b;
+      padding: 5px 10px;
+      padding-left: 40px;
+      border-radius: 15px;
+      margin: 5px 0;
+      color: #f9f7f7;
+      font-size: 16px;
+      min-height: 30px;
+      box-shadow: 0 5px 15px rgba(123, 32, 32, 0.05);
+}
+
+.inputpwd {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}  
+input[type="email"] {
+      width: 300px;
+      position: relative;
+      outline: none;
+      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: #514b4b;
+      padding: 5px 10px;
+      padding-left: 40px;
+      border-radius: 15px;
+      margin: 5px 0;
+      color: #f9f7f7;
+      font-size: 16px;
+      box-shadow: 0 5px 15px rgba(123, 32, 32, 0.05);
+}
+
+.password-control {
+      position: absolute;
+      top: 1px;
+      right: 10px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+      transition: 0.5s;
+}
+        
+.view {
+        background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+        transition: 0.5s;
+}
+
+.fas {
+      width: 32px;
+      height: 20px;
+      position: absolute;
+      top: 13px;
+      left: 13px;
+}    
+input::placeholder {
+    color: #fff;
+}
+    
+span {
+    position: absolute;
+    left: 30px;
+    font-size: 16px;
+    padding: 10px;
+    display: inline-block;
+    color: #111010;
+    transition: .5s;
+    pointer-events: none;
+}
+    
+input:focus ~ span,
+input:valid ~ span {
+    transform: translateX(-30px) translateY(-25px);
+    font-size: 16px;
+    color: #eee;
+}
+
+input[type="submit"] {
+    width: 100px;
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background: #ff4b2b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.forgotpwd{
+    color: #fff;
+}
+
+.forgotpwd:hover{
+    background-color: #000;
+    background-image: linear-gradient(to right, #952c2c 0%, rgb(90, 83, 83) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.remember {
+    width: 15px;
+    position: absolute;
+    top: 0px;
+    left: 13px;
+    cursor: pointer;
+}
+
+label{
+    height: 30px;
+    position: relative;
+    top: 2px;
+    left: 45px;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background: #ff4b2b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background: transparent;
+    border-color: #ff4b2b;
+    background-color: #ff4b2b
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.overlay {
+    background: transparent;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no repeat 0 0 /cover;
+    color: #fff;
+    position: absolute;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+.container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
