@@ -1,444 +1,249 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'El Messiri', sans-serif;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: #f6f5f7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: -20px 0 50px;
-    background-image: url('../Images/recipe2.jpg');
-    background-size: cover;
-}
-
-h1 {
-    font-family: 'El Messiri', sans-serif;
-    font-weight: bold;
-    margin: 0;
-    color: beige;
-}
-
-p {
-    font-size: 14px;
-    font-family: 'El Messiri', sans-serif;
-    font-weight: bold;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 20px 0 30px;
-}
-
-span {
-    font-size: 12px;
-    color: beige;
-}
-
-a {
-    color: #fff;
-    font-size: 14px;
-    font-family: 'El Messiri', sans-serif;
-    text-decoration: none;
-    margin: 15px 0;
-}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    background: rgb(157, 150, 150);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    position: absolute;
-    overflow: hidden;
-    width: 500px;
-    max-width: 140%;
-    min-height: 400px;
-    opacity: 0.8;
-}
-
-.box h1 {
-    position: absolute;
-    left: 135px;
-    top: 30px;
-    display: inline-block;
-}
-
-.container {
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    position: absolute;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
-    opacity: 0.8;
-}
-
-.container::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    bottom: 5px;
-    left: 5px;
-    border-radius: 5px;
-    pointer-events: none;
-    background: linear-gradient(to bottom, rgba(120, 114, 114, 0.1) 0%, rgba(153, 79, 79, 0.1) 2%);
-}
-
-.form-container form {
-    background: rgb(157, 150, 150);
-    display: flex;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.inputBx {
-    position: relative;
-    width: 100%;
-    margin-bottom: 18px;
-}
-
-input {
-    width: 100%;
-    outline: none;
-    border: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: #514b4b;
-    padding: 5px 10px;
-    padding-left: 40px;
-    border-radius: 15px;
-    margin: 5px 0;
-    color: #f9f7f7;
-    font-size: 16px;
-    min-height: 40px;
-    box-shadow: 0 5px 15px rgba(123, 32, 32, 0.05);
-}
-
-.inputpwd {
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-    min-height: 40px;
-    text-align: center;
-}
-
-.box input[type="email"] {
-    width: 300px;
-    position: relative;
-    outline: none;
-    border: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: #514b4b;
-    padding: 5px 10px;
-    padding-left: 40px;
-    border-radius: 15px;
-    margin: 5px 0;
-    color: #f9f7f7;
-    font-size: 16px;
-    box-shadow: 0 5px 15px rgba(123, 32, 32, 0.05);
-}
-
-.password-control {
-    position: absolute;
-    top: 1px;
-    right: 10px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
-    transition: 0.5s;
-}
-
-.view {
-    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
-    transition: 0.5s;
+  font-family: 'Montserrat', sans-serif;
+  background: #fdfbfb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 50px;
+  background-image: url('../Images/recipe3.jpg');
+  background-size: cover;
 }
 
 .fas {
-    width: 32px;
-    height: 20px;
-    position: absolute;
-    top: 14px;
-    left: 13px;
+  width: 32px;
+  height: 20px;
+  position: absolute;
+  top: 14px;
+  left: 13px;
 }
 
-.login {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    color: #fff;
-    font-size: 14px;
-    text-decoration: none;
-    overflow: hidden;
-    transition: color 0.3s ease-out;
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
 
-.login::before,
-.login::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: 0;
-    background-color: #ff4b2b;
-    transition: width 0.3s ease-out;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.login::before {
-    left: 0;
+.container {
+  position: relative;
+  padding: 50px;
+  width: 260px;
+  min-height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
 }
 
-.login::after {
-    right: 0;
+.container::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 2%);
 }
 
-.login:hover {
-    color: #111010;
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.login:hover::before,
-.login:hover::after {
-    width: 100%;
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fdfbfb;
+}
+
+.inputBx {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 80%;
+  outline: none;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 10px;
+  padding-left: 40px;
+  border-radius: 15px;
+  color: #0b0b0b;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.password-control {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+  transition: 0.5s;
+}
+
+.view {
+  background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+  transition: 0.5s;
+}
+
+
+
+input[type="submit"] {
+  background: #fff;
+  color: #111;
+  max-width: 100px;
+  padding: 8px 10px;
+  box-shadow: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 1.5s;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(115deg,
+      rgba(0, 0, 0, 0.10),
+      rgba(255, 255, 255, 0.25));
+  color: #fff;
+  transition: .5s;
 }
 
 input::placeholder {
-    color: #fff;
+  color: #fff;
 }
 
 span {
-    position: absolute;
-    font-family: 'El Messiri', sans-serif;
-    top: 3px;
-    left: 30px;
-    font-size: 16px;
-    padding: 10px;
-    display: inline-block;
-    color: #111010;
-    transition: .5s;
-    pointer-events: none;
+  position: absolute;
+  left: 30px;
+  padding: 10px;
+  display: inline-block;
+  color: #fff;
+  transition: .5s;
+  pointer-events: none;
 }
 
 input:focus~span,
 input:valid~span {
-    transform: translateX(-30px) translateY(-25px);
-    font-family: 'El Messiri', sans-serif;
-    font-size: 16px;
-    color: #eee;
+  transform: translateX(-30px) translateY(-25px);
+  font-size: 12px;
 }
 
-input[type="submit"] {
-    width: 100px;
-    border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    background: #ff4b2b;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 2px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'El Messiri', sans-serif;
+
+p {
+  color: #fff;
+  font-size: 15px;
+  margin-top: 5px;
 }
 
-.resetpwd {
-    position: absolute;
-    left: 160px;
-    top: 230px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    background: #ff4b2b;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
+a {
+  color: #fff;
 }
 
-.forgotpwd {
-    color: #fff;
-}
-
-.forgotpwd:hover {
-    background-color: #000;
-    background-image: linear-gradient(to right, #952c2c 0%, rgb(90, 83, 83) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+a:hover {
+  background-color: #000;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .remember {
-    width: 15px;
-    position: absolute;
-    top: 0px;
-    left: 13px;
-    cursor: pointer;
+  width: 15px;
+  position: absolute;
+  top: 0px;
+  left: 13px;
+  cursor: pointer;
 }
+
 
 label {
-    height: 40px;
-    position: relative;
-    font-family: 'El Messiri', sans-serif;
-    top: 14px;
-    left: 45px;
+  height: 40px;
+  position: relative;
+  font-family: 'El Messiri', sans-serif;
+  bottom: 5px;
+  left: 45px;
 }
 
-button {
-    border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    background: #ff4b2b;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    font-family: 'El Messiri', sans-serif;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: rgb(157, 150, 150);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: absolute;
+  overflow: hidden;
+  width: 500px;
+  max-width: 140%;
+  min-height: 400px;
+  opacity: 0.8;
 }
 
-button:active {
-    transform: scale(0.95);
+.box h1 {
+  position: absolute;
+  left: 135px;
+  top: 30px;
+  display: inline-block;
 }
-
-button:focus {
-    outline: none;
-}
-
-button.ghost {
-    background: transparent;
-    border-color: #ff4b2b;
-    background-color: #ff4b2b
-}
-
-.form-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
-}
-
-.sign-in-container {
-    left: 0;
-    width: 50%;
-    z-index: 2;
-}
-
-.sign-up-container {
-    left: 0;
-    width: 50%;
-    z-index: 1;
-    opacity: 0;
-}
-
-.overlay-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100;
-}
-
-.overlay {
-    background: transparent;
-    background: linear-gradient(to right, #ff4b2b, #ff416c) no repeat 0 0 /cover;
-    color: #fff;
-    position: absolute;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-}
-
-.overlay-panel {
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 40px;
-    height: 100%;
-    width: 50%;
-    text-align: center;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-}
-
-.overlay-right {
-    right: 0;
-    transform: translateX(0);
-}
-
-.overlay-left {
-    transform: translateX(-20%);
-}
-
-.container.right-panel-active .sign-in-container {
-    transform: translateX(100%);
-}
-
-.container.right-panel-active .overlay-container {
-    transform: translateX(-100%);
-}
-
-.container.right-panel-active .sign-up-container {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-}
-
-.container.right-panel-active .overlay {
-    transform: translateX(50%);
-}
-
-.container.right-panel-active .overlay-left {
-    transform: translateX(0);
-}
-
-.container.right-panel-active .overlay-right {
-    transform: translateX(20%);
-}
-
 
 .header {
-    background-color: transparent;
-    box-shadow: 1px 1px 4px 0 rgba(62, 10, 10, 0.1);
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 20px;
-    left: 20px;
-    margin: 0;
+  background-color: transparent;
+  box-shadow: 1px 1px 4px 0 rgba(62, 10, 10, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  left: 20px;
+  margin: 0;
 }
 
 .header h1 {
-    font-family: 'Brush Script MT';
-    font-weight: bold;
-    color: beige;
-    font-size: 80px;
+  font-family: 'Brush Script MT';
+  font-weight: bold;
+  color: rgb(4, 4, 4);
+  font-size: 80px;
 }

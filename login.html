@@ -2,96 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width-device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css">
-    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
-    <title>Sign in/Sign Up</title>
+  <meta charset="UTF-8">
+  <title> HOME </title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway|Spectral'>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <meta name="viewport" content="width-device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css">
+
 </head>
 
 <body>
-    <header class="header">
-        <h1>Recipe Sharing</h1>
-    </header>
-    <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>SIGN UP</h1>
-                <div class="inputBx">
-                    <input type="text" required="required">
-                    <span>First Name</span>
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="inputBx">
-                    <input type="text" required="required">
-                    <span>Last Name</span>
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="inputBx">
-                    <input type="email" required="required">
-                    <span>Email</span>
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="inputBx">
-                    <input id="password-input" type="password" name="password" required="required">
-                    <span>Password</span>
-                    <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
-                    <i class="fas fa-key"></i>
-                </div>
-                <div class="inputBx">
-                    <input id="password-input" type="password" name="password" required="required">
-                    <span>Confirm Password</span>
-                    <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
-                    <i class="fas fa-key"></i>
-                </div>
-                <div class="inputBx">
-                    <input type="submit" value="Sign In">
-                </div>
-            </form>
-        </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>LOGIN</h1>
-                <div class="inputBx">
-                    <input type="text" required="required">
-                    <span>UserName</span>
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="inputBx">
-                    <input id="password-input" type="password" name="password" required="required">
-                    <span>Password</span>
-                    <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
-                    <i class="fas fa-key"></i>
-                </div>
-                <div class="inputBx">
-                    <input type="checkbox" id="remember" class="remember" />
-                    <label for="remember">Keep me Signed in</label>
-                </div>
-                <div class="inputBx">
-                    <input type="submit" value="Log In">
-                </div>
-                <div class="inputBx">
-                    <p>Forgot password? <a class="forgotpwd" href="forgotpassword.html">Click Here</a></p>
-                </div>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello,Friend</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
-                </div>
-            </div>
-        </div>
+  <header class="header">
+    <h1>Recipe Sharing</h1>
+  </header>
+  <section>
+    <div class="container">
+      <div class="form">
+        <h2>LOGIN</h2>
+        <form action="">
+          <div class="inputBx">
+            <input type="email" name="email" required="required">
+            <span>Email</span>
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="inputBx password">
+            <input id="password-input" type="password" name="password" required="required">
+            <span>Password</span>
+            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+            <i class="fas fa-key"></i>
+          </div>
+          <div class="inputBx">
+            <input type="checkbox" id="remember" class="remember" />
+            <label for="remember">Keep me Signed in</label>
+          </div>
+          <div class="inputBx">
+            <input type="submit" value="Log in">
+          </div>
+        </form>
+        <p>Forgot password? <a href="forgotpassword.html">Click Here</a></p>
+        <p>Don't have an account <a href="signin.html">Sign up</a></p>
+      </div>
     </div>
-    <script src="./JS/main.js"></script>
+  </section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="./JS/main.js"></script>
 </body>
 
 </html>
