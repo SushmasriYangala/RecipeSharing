@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #fdfbfb;
+  background: #090909;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,10 +58,10 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(50, 46, 46, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 10px;
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 25px 45px rgba(20, 19, 19, 0.2);
 }
 
 .container::after {
@@ -87,7 +87,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fdfbfb;
+  color: #0a0a0a;
 }
 
 .inputBx {
@@ -101,7 +101,7 @@ input {
   outline: none;
   border: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(7, 7, 7, 0.2);
   padding: 8px 10px;
   padding-left: 40px;
   border-radius: 15px;
@@ -129,7 +129,7 @@ input {
 
 
 input[type="submit"] {
-  background: #fff;
+  background: #747171;
   color: #111;
   max-width: 100px;
   padding: 8px 10px;
@@ -143,12 +143,12 @@ input[type="submit"]:hover {
   background: linear-gradient(115deg,
       rgba(0, 0, 0, 0.10),
       rgba(255, 255, 255, 0.25));
-  color: #fff;
+  color: #080808;
   transition: .5s;
 }
 
 input::placeholder {
-  color: #fff;
+  color: #090909;
 }
 
 span {
@@ -156,7 +156,7 @@ span {
   left: 30px;
   padding: 10px;
   display: inline-block;
-  color: #fff;
+  color: #070707;
   transition: .5s;
   pointer-events: none;
 }
@@ -169,13 +169,13 @@ input:valid~span {
 
 
 p {
-  color: #fff;
+  color: #020202;
   font-size: 15px;
   margin-top: 5px;
 }
 
 a {
-  color: #fff;
+  color: #030303;
 }
 
 a:hover {
@@ -209,7 +209,7 @@ label {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background: rgb(157, 150, 150);
+  background: rgb(37, 36, 36);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: absolute;
   overflow: hidden;
