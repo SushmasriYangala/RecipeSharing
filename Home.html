@@ -1,37 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HOME</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway|Spectral"
+    />
+    <link rel="stylesheet" href="./CSS/home.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title> HOME </title>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway|Spectral'>
-    <link rel="stylesheet" href="./CSS/home.css">
-
-</head>
-
-<body>
+  <body>
     <div class="burger">
-        <span></span>
+      <span></span>
     </div>
     <header class="header">
-        <h1 class="logo">Recipe Sharing</h1>
+      <h1 class="logo">Recipe Sharing</h1>
     </header>
     <nav>
-        <ul class="main">
-            <li><a href="login.html">Login</a></li>
-            <li><a href="#0">HOME</a></li>
-            <li><a href="#0">AddRecipe</a></li>
-            <li><a href="#0">Search</a></li>
-            <li><a href="#0">Collection</a></li>
-            <li><a href="#0">MealPlanner</a></li>
-            <li><a href="#0">Contactus</a></li>
-            <li><a href="#0">Profile</a></li>
-            <li><a href="#0">Logout</a></li>
-        </ul>
+      <ul class="main">
+        <li><a href="#0">HOME</a></li>
+        <li><a href="#0">Contactus</a></li>
+        <li><a href="#0">Profile</a></li>
+        <li><a href="#0">Logout</a></li>
+      </ul>
     </nav>
     <div class="overlay"></div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+        <div class="slide first">
+          <img src="./Images/indian.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./Images/indian2.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./Images/american.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./Images/italian.jpg" alt="" />
+        </div>
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+    <a class="button" href="login.html">Get Started</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./JS/home.js"></script>
-</body>
-
+  </body>
 </html>
