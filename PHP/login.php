@@ -1,20 +1,20 @@
 <?php
 include("connection.php");
 extract($_POST);
-if(isset($_POST['signin']))
-{	 
-     $firstname = $_POST['firstname'];
-	 $lastname = $_POST['lastname'];
-	 $email = $_POST['email'];
-	 $password = $_POST['password'];
-	 $sql = "INSERT INTO users (firstname,lastname,email,password)
-	 VALUES ('$firstname','$lastname','$email','$password')";
-	 if (mysqli_query($conn, $sql)) {
-		echo "New record created successfully !";
-	 } else {
-		echo "Error: " . $sql . "
-" . mysqli_error($conn);
-	 }
-	 mysqli_close($conn);
+if(isset($_POST['login']))
+{
+$email = $_POST['email'];
+$sql = "SELECT * FROM users WHERE email='$email'";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$password = $_POST['password'];
+if (password_verify($password, $row['password_hash'])) {
+  $_SESSION['user'] = $row['username'];
+  header('Location: ./Home.html');
+  exit;
+} else {
+  header('Location: ./login.html');
+  exit;
+}
 }
 ?>

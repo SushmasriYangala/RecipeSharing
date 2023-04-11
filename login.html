@@ -20,13 +20,13 @@
   </head>
 
   <body>
-    <form method="post" action="./PHP/signin.php">
       <header class="header">
         <h1>Recipe Sharing</h1>
       </header>
       <section>
         <div class="container">
           <div class="form">
+            <form method="post" action="./PHP/login.php">
             <h2>LOGIN</h2>
             <div class="inputBx">
               <input type="email" name="email" required="required" />
@@ -53,15 +53,15 @@
               <label for="remember">Keep me Signed in</label>
             </div>
             <div class="inputBx">
-              <input type="submit" value="Log in" />
+              <input type="submit"name="login" value="Log in" />
             </div>
             <p>Forgot password? <a href="forgotpassword.html">Click Here</a></p>
             <p>Don't have an account <a href="signin.html">Sign up</a></p>
+          </form>
           </div>
         </div>
       </section>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="./JS/main.js"></script>
-    </form>
   </body>
 </html>
