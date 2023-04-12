@@ -13,46 +13,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   margin: -20px 0 50px;
   background-image: url("../Images/home.jpg");
   background-size: cover;
 }
 
-.header {
+.logo {
   font-family: "Brush Script MT";
   background-color: transparent;
-  box-shadow: 1px 1px 4px 0 rgba(62, 10, 10, 0.1);
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 20px;
+  bottom: 40px;
   left: 20px;
   font-weight: bold;
   margin: 0;
   color: rgb(10, 10, 10);
-  font-size: 50px;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  background: #090909;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0 50px;
-  background-image: url("../Images/home.jpg");
-  background-size: cover;
+  font-size: 80px;
 }
 
 .slider {
-  width: 800px;
+  width: 1000px;
   height: 500px;
   border-radius: 10px;
   overflow: hidden;
@@ -77,11 +63,9 @@ body {
 }
 
 .slide img {
-  width: 800px;
-  height: 500px;
+  width: 1000px;
+  height: 600px;
 }
-
-/*css for manual slide navigation*/
 
 .navigation-manual {
   position: absolute;
@@ -169,10 +153,10 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: 7px;
+  border-radius: 150px;
   box-shadow: 4px rgba(5, 5, 5, 0.1);
   text-align: right;
   position: relative;
-  top: 5%;
-  left: 30px;
+  bottom: 77%;
+  left: 680px;
 }
