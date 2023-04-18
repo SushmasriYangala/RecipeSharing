@@ -95,10 +95,6 @@ body{
     display: flex;
     align-items: center;
 }
-.sidebar header .logo-text{
-    display: flex;
-    flex-direction: column;
-}
 header .image-text .name {
     margin-top: 2px;
     font-size: 20px;
@@ -277,17 +273,19 @@ header .image-text .profession{
 .logo {
     font-family: "Brush Script MT";
     background-color: transparent;
-    position: relative;
-    width: 90%;
-    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 10px;
     left: 140px;
     font-weight: bold;
     margin: 0;
     color: rgb(10, 10, 10);
     font-size: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+      
   }

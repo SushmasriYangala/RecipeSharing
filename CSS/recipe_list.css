@@ -1,0 +1,91 @@
+/* Recipe card container */
+.recipe-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  /* Recipe card header */
+  .recipe-card h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Recipe card image */
+  .recipe-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+
+  /* Recipe card ingredients */
+  .recipe-card p.ingredients {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  /* Recipe card ingredient checkbox */
+  .recipe-card label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  /* Recipe card preparation time and cooking time */
+  .recipe-card p.time {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  /* Recipe card description */
+  .recipe-card p.description {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  /* Recipe card tags */
+  .recipe-card p.tags {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  /* Recipe card date and time */
+  .recipe-card p.date {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  /* Recipe card notes */
+  .recipe-card p.notes {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  /* Responsive styles */
+  @media screen and (min-width: 768px) {
+    /* For screens 768px and larger */
+    .recipe-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .recipe-card > * {
+      flex-basis: 50%;
+      margin-right: 40px;
+      box-sizing: border-box;
+    }
+
+    .recipe-card > *:last-child {
+      margin-right: 0;
+    }
+
+    .recipe-card img {
+      margin: 0;
+    }
+  }
