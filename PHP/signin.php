@@ -11,10 +11,11 @@ if(isset($_POST['signin']))
 	 $sql = "INSERT INTO users (firstname,lastname,email,password_hash)
 	 VALUES ('$firstname','$lastname','$email','$password_hash')";
 	 if (mysqli_query($conn, $sql)) {
-		echo "New record created successfully !";
+		header('Location: ../login.html');
+      exit;
 	 } else {
-		echo "Error: " . $sql . "
-" . mysqli_error($conn);
+		header('Location: ../signin.html');
+      exit;
 	 }
 	 mysqli_close($conn);
 }

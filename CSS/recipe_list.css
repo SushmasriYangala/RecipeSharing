@@ -1,91 +1,223 @@
-/* Recipe card container */
-.recipe-card {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700');
 
-  /* Recipe card header */
-  .recipe-card h1 {
-    font-size: 36px;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
+body {
+    background: #f9f9f9;
+}
 
-  /* Recipe card image */
-  .recipe-card img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto 20px;
-  }
+#card-container {
+    background: #ededed;
+    box-shadow: 0px 0px 200px #999;
+    font-family: 'Oxygen', sans-serif;
+    width: 65%;
+    height: 385px;
+    margin: 5% auto;
+}
 
-  /* Recipe card ingredients */
-  .recipe-card p.ingredients {
+#card-title {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    background: #455560;
+    padding: 15px 20px;
+    color: #fff;
+    border-radius: 2px 2px 0 0;
+}
+
+#details {
+    background: #fff;
+    border-left: solid 1px #ededed;
+    border-right: solid 1px #ededed;
+    font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
+    padding: 15px 20px;
+}
+
+.detail-value {
+    color: #455560;
+}
+
+#card-items {
+    background: #ededed;
+    font-family: 'Oxygen', sans-serif;
+    padding: 20px
+}
+
+.card-item-title {
     font-size: 18px;
-    margin: 0;
-  }
+    font-weight: 700;
+}
 
-  /* Recipe card ingredient checkbox */
-  .recipe-card label {
-    display: inline-block;
+ul.checkmark li:before {
+    color: #455560;
+    content: "\2713\0020";
+    font-weight: 600;
+    margin-left: -38px;
     margin-right: 10px;
-  }
+}
 
-  /* Recipe card preparation time and cooking time */
-  .recipe-card p.time {
-    font-size: 18px;
-    margin: 0;
-  }
+.checkmark li {
+    list-style-type: none;
+}
 
-  /* Recipe card description */
-  .recipe-card p.description {
-    font-size: 18px;
-    margin: 20px 0;
-  }
+li {
+    margin-bottom: 3px;
+}
 
-  /* Recipe card tags */
-  .recipe-card p.tags {
-    font-size: 18px;
-    margin: 0;
-  }
+#method {
+    background: #fff;
+    border-left: solid 1px #ededed;
+    border-right: solid 1px #ededed;
+    border-bottom: solid 1px #ededed;
+    padding: 20px;
+}
 
-  /* Recipe card date and time */
-  .recipe-card p.date {
-    font-size: 18px;
-    margin: 0;
-  }
+#method li {
+    list-style-position: inside;
+    margin-bottom: 10px;
+    margin-left: -38px;
+    list-style-type: none;
+}
 
-  /* Recipe card notes */
-  .recipe-card p.notes {
-    font-size: 18px;
-    margin: 20px 0;
-  }
+#recipe-image {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
-  /* Responsive styles */
-  @media screen and (min-width: 768px) {
-    /* For screens 768px and larger */
-    .recipe-card {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 40px;
-    }
+#recipe-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 
-    .recipe-card > * {
-      flex-basis: 50%;
-      margin-right: 40px;
-      box-sizing: border-box;
-    }
+ol {
+    counter-reset: item;
+}
 
-    .recipe-card > *:last-child {
-      margin-right: 0;
-    }
+ol>li {
+    counter-increment: item;
+}
 
-    .recipe-card img {
-      margin: 0;
-    }
-  }
+ol>li::before {
+    font-weight: bold;
+    content: counter(item) ".";
+    margin-right: 8px;
+}
+
+button {
+    background-color: #2f312f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 200px #999;
+    font-family: 'Oxygen', sans-serif;
+    margin: 5% auto;
+}
+
+button:hover {
+    background-color: #30404D;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+#edit-delete-container {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.edit {
+    background-color: #2f312f;
+    border: none;
+    color: white;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 200px #999;
+    font-family: 'Oxygen', sans-serif;
+    margin: 5% auto;
+}
+
+.delete {
+    background-color: #2f312f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 200px #999;
+    font-family: 'Oxygen', sans-serif;
+    margin: 5% auto;
+}
+
+.edit:hover,
+.delete:hover {
+    background-color: #30404D;
+}
+
+
+#button-items {
+    background: #cacdd1;
+    /* font-family: 'Oxygen', sans-serif; */
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.delete_comment{
+    background-color: #f9f9f9;
+    border: none;
+    padding: 4px 10px;
+    color: #a02626;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 0px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 200px #999;
+    font-family: 'Oxygen', sans-serif;
+    margin: 5% auto;
+}
+.comment-header{
+    color: #6d4b26;
+  font-family: "El Messiri", sans-serif;
+    text-decoration:underline
+    
+}
+.comment-date{
+    left:0;
+    padding:30%
+}

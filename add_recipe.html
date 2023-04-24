@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Add</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway|Spectral"
-  />
     <link rel="stylesheet" type="text/css" href="./CSS/add_recipe.css">
 </head>
-
 <body>
     <div class="container">
         <form action="./PHP/upload_recipe.php" method="POST" enctype="multipart/form-data">
-            <h1 class="logo">Add Recipe</h1>
+            <h1>Add Recipe</h1>
             <label for="recipe_name">Recipe Name:</label>
             <input type="text" id="recipe_name" name="recipe_name" placeholder="Enter recipe name" required>
 
             <label for="ingredients">Ingredients:</label>
             <textarea id="ingredients" name="ingredients" placeholder="Enter ingredients" required></textarea>
-
+            
             <label for="recipe_notes">Recipe Notes:</label>
             <textarea id="recipe_notes" name="recipe_notes" placeholder="Recipe Note" required></textarea>
 
             <label for="preparation_time">Preparation Time:</label>
-            <input type="text" id="preparation_time" name="preparation_time" placeholder="Enter preparation time"
-                required>
+            <input type="text" id="preparation_time" name="preparation_time" placeholder="Enter preparation time" required>
 
             <label for="cooking_time">Cooking Time:</label>
             <input type="text" id="cooking_time" name="cooking_time" placeholder="Enter cooking time" required>
@@ -37,7 +30,7 @@
             <label for="tags">Tags:</label>
             <input type="text" id="tags" name="tags" placeholder="Enter Tags" required>
 
-            <input type="file" name="file" id="file">
+            <input type="file" name="image" id="file">
 
             <div class="buttons">
                 <button type="submit" name="submit" value="submit">Save</button>
@@ -46,5 +39,4 @@
         </form>
     </div>
 </body>
-
 </html>

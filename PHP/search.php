@@ -10,35 +10,31 @@
 		<button type="submit">Search</button>
 	</form>
 	<?php
-		// Connect to databa
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "recipe";
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-        // Check connection
-        if (!$conn) {
-          die("Connection failed: " . mysqli_connect_error());
-        }
-    
+   session_start();
+require_once("connection.php");
+   // Check if user is logged in
+   if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login.html');
+     exit();
+   }
+		    
         // Retrieve data from database based on user's input
         if(isset($_POST['search'])){
             $search = $_POST['search'];
-            $sql = "SELECT id, recipe_name, image FROM recipe WHERE recipe_name LIKE '%$search%'";
+            $sql = "SELECT recipe_id, recipe_name, image_path FROM recipes WHERE recipe_name LIKE '%$search%'";
         }else{
-            $sql = "SELECT id, recipe_name, image FROM recipe";
+            $sql = "SELECT recipe_id, recipe_name, image_path FROM recipes";
         }
         $result = mysqli_query($conn, $sql);
-    
+        if ($result) {
         // Loop through results and display recipe cards with button
         while ($row = mysqli_fetch_assoc($result)) {
-          $recipe_id = $row['id'];
+          $recipe_id = $row['recipe_id'];
           $recipe_name = $row['recipe_name'];
-          $image = base64_encode($row['image']); // Convert blob image to base64 string
+          $image_path = $row['image_path']; // Convert blob image to base64 string
     
           echo '<div class="recipe-card">';
-          echo '<img src="data:image/jpeg;base64,'.$image.'" alt="'.$recipe_name.'">';
+          echo '<img src="'.$image_path.'" alt="'.$recipe_name.'">';
           echo '<h2>'.$recipe_name.'</h2>';
           echo '<form action="recipe_list.php" method="get">';
           echo '<input type="hidden" name="recipe_id" value="'.$recipe_id.'">';
@@ -46,7 +42,9 @@
           echo '</form>';
           echo '</div>';
         }
-    
+      } else {
+        echo "Error: " . mysqli_error($conn);
+      }
         // Close database connection
         mysqli_close($conn);
     ?>

@@ -12,6 +12,7 @@ body {
     text-align: center;
     transition: transform 0.3s ease-in-out;
     height: 300px;
+    width: 250px;
 }
 
 .recipe-card:hover {
@@ -95,3 +96,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #989191;
 }
+
+/* Add a media query to adjust the height for smaller screens */
+@media only screen and (max-width: 768px) {
+    .recipe-card {
+      height: 300px;
+    }
+  }
