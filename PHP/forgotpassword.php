@@ -8,7 +8,7 @@ extract($_POST);
 
   $host ="localhost";
   $site ="Recipe";
-  $confirmsite="/Practice/PHP/checkPasswordEmail.php";
+  $confirmsite="/RecipeSharing/PHP/checkPasswordEmail.php";
   $myemail = "sushamsri9947@gmail.com";
   // Put together the confirmation ID:
   $now = time();

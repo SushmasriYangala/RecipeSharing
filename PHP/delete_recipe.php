@@ -26,7 +26,7 @@ if ($result) {
         echo "Error deleting shopping list records: " .  mysqli_error($conn);
     }
 
-    // Delete the records from the shoppinglist table
+    // Delete the records from the favorites table
     $sql = "DELETE FROM favorites WHERE recipe_id = $recipe_id";
     if ($conn->query($sql) === TRUE) {
         echo "favorites list records deleted successfully";

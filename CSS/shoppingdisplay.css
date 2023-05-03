@@ -16,8 +16,35 @@ body {
 }
 
 .recipe-card img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#edit-delete-container {
+  display: inline-flex;
+  gap: 10px;
+}
+.delete {
+  background-color: #2f312f;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 200px #999;
+  font-family: 'Oxygen', sans-serif;
+  margin: 5% auto;
+}
+
+.delete:hover {
+  background-color: #30404D;
 }

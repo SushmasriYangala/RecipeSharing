@@ -63,6 +63,9 @@ session_start();
       echo '<input type="checkbox" id="my-checkbox" name="ingredients[]" value="'.htmlspecialchars($ingredient).'" '.$checked.' onchange="updateLabelStyle(this)"><label id="my-label">'.$ingredient.'</label><br>';
     }
     echo '</p>';
+    echo '<div id="edit-delete-container">';
+      echo '<a class = "delete" href="delete_shoppinglist.php?recipe_id=' . $recipe_id . '">Delete from shoppinglist</a>';
+      echo '</div>';
     echo '</div>';
   }
 // Close database connection

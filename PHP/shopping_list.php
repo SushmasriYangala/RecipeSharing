@@ -57,7 +57,7 @@ $result = mysqli_query($conn, $query);
         echo '</div>';
       }
     } else {
-    echo 'You have not added any recipes to your favorites list.';
+    echo 'You have not added any recipes to your Shopping list.';
   }
   ?>
 

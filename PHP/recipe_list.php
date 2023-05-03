@@ -88,6 +88,7 @@
       echo '<div id="edit-delete-container">';
       echo '<a class ="edit" href="edit_recipe.php?recipe_id=' . $recipe_id . '">Edit the Recipe</a><br>';
       echo '<a class = "delete" href="delete_recipe.php?recipe_id=' . $recipe_id . '">Delete the Recipe</a>';
+      echo '<a class = "delete" href="delete_favourites.php?recipe_id=' . $recipe_id . '">Delete from favourites</a>';
       echo '</div>';
     }
       
