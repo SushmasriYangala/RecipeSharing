@@ -3,8 +3,14 @@
     <head>
         <title>Categories</title>
         <link rel="stylesheet" href="../CSS/category.css">
-    </head>
-    <body>
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../CSS/back-home.css">
+</head>
+<body>
+  <?php
+  
+require_once('home-back.php');
+?>
     <?php
     session_start();
     require_once('connection.php');
@@ -64,6 +70,11 @@
                 <img src="../categories/Sandwich.jpg" alt="'.$recipe_name.'">
                     <input type="hidden" name="recipe_id" value="'.$recipe_id.'">
                     <button type="submit" name="tags" value="sandwich">Sandwich</button>
+            </div>
+            <div class="recipe-card">
+                <img src="../categories/roti.jpg" alt="'.$recipe_name.'">
+                    <input type="hidden" name="recipe_id" value="'.$recipe_id.'">
+                    <button type="submit" name="tags" value="roti">Roti</button>
             </div>
             <div class="recipe-card">
                 <img src="../categories/smoothies.jpg" alt="'.$recipe_name.'">

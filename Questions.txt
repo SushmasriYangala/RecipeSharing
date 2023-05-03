@@ -1,1 +1,0 @@
-In the login page after entering values the redirection need to correct in the code.

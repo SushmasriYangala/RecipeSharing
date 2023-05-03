@@ -3,8 +3,13 @@
 <head>
 	<title>Recipe Card</title>
     <link rel="stylesheet" href="../CSS/search.css" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../CSS/back-home.css">
 </head>
 <body>
+  <?php
+require_once('home-back.php');
+?>
 <?php
 // start session
 session_start();

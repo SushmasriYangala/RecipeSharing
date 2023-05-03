@@ -15,17 +15,30 @@ form {
     border-radius: 4px;
   }
   
-  input[type=submit] {
-    background-color: #4CAF50;
+  button {
+    background-color: #282928;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .cancel {
+    background-color: #ee5656;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .cancel:hover{
+    background-color: #b36f6f;
+  }
   
-  input[type=submit]:hover {
-    background-color: #45a049;
+  button:hover {
+    background-color: #625c5c;
   }
   
   label {

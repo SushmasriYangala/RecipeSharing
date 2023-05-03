@@ -1,14 +1,17 @@
 body {
-    background-image: url("../Images/home.jpg");
+    background-color: #DCD9D4;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+    background-blend-mode: soft-light, screen;
     background-size: cover;
-  }
-  .recipe-card {
+}
+
+.recipe-card {
     display: inline-block;
     margin: 20px;
     padding: 20px;
-    background-color: #fff;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 35px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
     height: 300px;
@@ -23,7 +26,7 @@ body {
     width: 100%;
     height: 60%;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 35px;
     margin-bottom: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -72,7 +75,7 @@ input[type="text"] {
     padding: 10px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 35px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
 }
@@ -84,11 +87,11 @@ input[type="text"]:focus {
 
 button[type="submit"] {
     padding: 10px 20px;
-    background-color: #535050;
+    background-image: linear-gradient(109.1deg, rgba(181, 73, 91, 1) 7.1%, rgba(225, 107, 140, 1) 86.4%);
     border: none;
     color: #fff;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 35px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -100,6 +103,6 @@ button[type="submit"]:hover {
 /* Add a media query to adjust the height for smaller screens */
 @media only screen and (max-width: 768px) {
     .recipe-card {
-      height: 300px;
+        height: 300px;
     }
-  }
+}

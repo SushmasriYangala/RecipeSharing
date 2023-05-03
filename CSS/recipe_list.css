@@ -23,6 +23,16 @@ body {
     border-radius: 2px 2px 0 0;
 }
 
+#card-title-time {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    background: #a6b7c3;
+    padding: 15px 20px;
+    color: #161515;
+    border-radius: 2px 2px 0 0;
+}
+
 #details {
     background: #fff;
     border-left: solid 1px #ededed;
@@ -34,6 +44,11 @@ body {
 
 .detail-value {
     color: #455560;
+}
+
+.detail-value-time {
+    color: #273034;
+    /* display: table-caption; */
 }
 
 #card-items {
@@ -201,7 +216,6 @@ textarea {
 .delete_comment{
     background-color: #f9f9f9;
     border: none;
-    padding: 4px 10px;
     color: #a02626;
     display: inline-block;
     font-size: 16px;
@@ -209,7 +223,7 @@ textarea {
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 0px 200px #999;
     font-family: 'Oxygen', sans-serif;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 .comment-header{
     color: #6d4b26;
@@ -221,3 +235,4 @@ textarea {
     left:0;
     padding:30%
 }
+

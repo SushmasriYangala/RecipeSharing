@@ -33,11 +33,32 @@ if ($result) {
     } else {
         echo "Error deleting favorites list records: " . mysqli_error($conn);
     }
+
+    // Delete the records from the shoppinglist table
+    $sql = "DELETE FROM comments WHERE recipe_id = $recipe_id";
+    if ($conn->query($sql) === TRUE) {
+        echo "comments list records deleted successfully";
+    } else {
+        echo "Error deleting comments list records: " . mysqli_error($conn);
+    }
     
     // Delete the record from the recipes table
     $sql = "DELETE FROM recipes WHERE recipe_id = $recipe_id";
     if ($conn->query($sql) === TRUE) {
         echo "Recipe deleted successfully";
+
+        // Delete the image file from the file system
+        $image_path = $row['image_path'];
+        if (file_exists($image_path)) {
+          if (unlink($image_path)) {
+            echo "Recipe image deleted successfully";
+          } else {
+            echo "Error deleting recipe image";
+          }
+        }
+        // Redirect to the search page after the deletion is completed
+        header("Location: search.php");
+        exit();
     } else {
         echo "Error deleting recipe: " . mysqli_error($conn);
     }

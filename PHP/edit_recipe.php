@@ -46,7 +46,7 @@ if(isset($_POST['submit'])) {
       
         // generate a unique file name to avoid conflicts with existing files
         $new_image_name = uniqid() . '-' . $image_name;
-        $image_path = 'uploads/' . $new_image_name;
+        $image_path = '../uploads/' . $new_image_name;
       
          // create the uploads directory if it doesn't exist
     if(!file_exists('uploads')) {
@@ -61,6 +61,10 @@ if(isset($_POST['submit'])) {
   
       // move the uploaded image to the desired directory on the server
       if(move_uploaded_file($image_tmp_name, $image_path)) {
+        // Delete the old image if it exists
+    if (!empty($row['image_path']) && file_exists($row['image_path'])) {
+      unlink($row['image_path']);
+  }
         // update the image path in the database
         $sql = "UPDATE recipes SET recipe_name='$recipe_name', ingredients='$ingredients', preparation_time='$preparation_time', cooking_time='$cooking_time', description='$description', tags='$tags', date_and_time ='$date_and_time', recipe_notes='$recipe_notes', image_path='$image_path' WHERE recipe_id=$recipe_id";
       } else {
@@ -115,7 +119,7 @@ mysqli_close($conn);
     <input type="file" name="image" id="file">
     <div class="buttons">
     <button type="submit" name="submit" value="submit">Save</button>
-    <button onclick="window.location.href='./Welcome.html'; return false;">Cancel</button>
+    <button onclick="window.location.href='../Welcome.html'; return false;">Cancel</button>
     </div>
     </form>
     </div>

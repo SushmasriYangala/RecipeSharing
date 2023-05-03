@@ -4,7 +4,13 @@
 <head>
     <title>Shopping List</title>
     <link rel="stylesheet" href="../CSS/shoppingdisplay.css" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../CSS/back-home.css">
 </head>
+<body>
+  <?php
+require_once('home-back.php');
+?>
 <script>
 function updateLabelStyle(checkbox) {
   var label = checkbox.nextElementSibling; // Get the label element

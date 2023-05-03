@@ -50,7 +50,7 @@ if(isset($_POST['submit'])) {
           mysqli_stmt_bind_param($stmt, "isssssssss", $user_id, $image_dest_path, $recipe_name, $ingredients, $preparation_time, $cooking_time, $description, $tags, $date_and_time, $recipe_notes);
 
           if(mysqli_stmt_execute($stmt)){
-            header("Location: ../Welcome.html");
+            header("Location: ./search.php");
             exit();
           } else {
             echo "Error uploading recipe: " . mysqli_stmt_error($stmt);

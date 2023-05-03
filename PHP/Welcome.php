@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Welcome.css">
+    <link rel="stylesheet" href="../CSS/Welcome.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <form action="./PHP/Welcome.php">
         <header class="header">
-            <h1 class="logo">Recipe Sharing Website</h1>
+            <h1 class="logo">Recipe Sharing</h1>
         </header>
         <nav class="sidebar close">
             <header>
@@ -33,7 +33,7 @@
 
                     <ul class="menu-links">
                         <li class="nav-link">
-                            <a href="./Welcome.html">
+                            <a href="#">
                                 <i class='bx bx-home-alt icon'></i>
                                 <span class="text nav-text">HOME</span>
                             </a>
@@ -82,9 +82,9 @@
                         </li>
 
                         <li class="nav-link">
-                            <a href="./PHP/aboutus.php">
+                            <a href="#">
                                 <i class='bx bxs-contact icon'></i>
-                                <span class="text nav-text">About Us</span>
+                                <span class="text nav-text">Contact Us</span>
                             </a>
                         </li>
 

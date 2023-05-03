@@ -3,8 +3,14 @@
 <head>
 	<title>Recipe Card</title>
     <link rel="stylesheet" href="../CSS/search.css" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../CSS/back-home.css">
 </head>
 <body>
+  <?php
+  
+require_once('home-back.php');
+?>
 	<form action="" method="post">
 		<input type="text" name="search" id="search" placeholder="search here....">
 		<button type="submit">Search</button>

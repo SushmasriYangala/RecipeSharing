@@ -13,12 +13,26 @@ if (isset($_POST['login'])) {
   if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
     if (password_verify($password, $row['password_hash'])) {
-      $_SESSION['user_id'] = $row['user_id'];
-      header('Location: ../Welcome.html');
+      if ($row['Verified'] == 1) {
+        $_SESSION['user_id'] = $row['user_id'];
+        header('Location: ../Welcome.html');
+        exit;
+      } else {
+        // User not verified
+        echo "<script>alert('User not verified');</script>";
+        header('Location: ../login.html');
+        exit;
+      }
+    } else {
+      // Incorrect password
+      header('Location: ../login.html');
       exit;
     }
+  } else {
+    // User not found
+    echo "<script>alert('User not found');</script>";
+    header('Location: ../login.html');
+    exit;
   }
-  header('Location: ../login.html');
-  exit;
 }
 ?>

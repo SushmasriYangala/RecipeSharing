@@ -23,7 +23,7 @@ body{
     min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
-    background-image: url("../Images/home.jpg");
+    background-image: url("../Images/recipe.jpg");
     background-size: cover;
 }
 
@@ -270,7 +270,7 @@ header .image-text .profession{
     width: calc(100% - 78px);
 }
 
-.logo {
+header .logo {
     font-family: "Brush Script MT";
     background-color: transparent;
     display: flex;
@@ -281,10 +281,11 @@ header .image-text .profession{
     font-weight: bold;
     margin: 0;
     color: rgb(10, 10, 10);
-    font-size: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
+    font-size: 130px;
+    position: absolute; /* Position the element */
+    top: 50%; /* Move the element 50% from the top */
+    left: 50%; /* Move the element 50% from the left */
+    transform: translate(-50%, -50%); /* Adjust the position using translation */
     width: 100%;
     z-index: 1;
       
