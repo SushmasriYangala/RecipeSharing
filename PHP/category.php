@@ -72,6 +72,11 @@ require_once('home-back.php');
                     <button type="submit" name="tags" value="sandwich">Sandwich</button>
             </div>
             <div class="recipe-card">
+                <img src="../categories/vegan.jpeg" alt="'.$recipe_name.'">
+                    <input type="hidden" name="recipe_id" value="'.$recipe_id.'">
+                    <button type="submit" name="tags" value="vegan">vegan</button>
+            </div>
+            <div class="recipe-card">
                 <img src="../categories/roti.jpg" alt="'.$recipe_name.'">
                     <input type="hidden" name="recipe_id" value="'.$recipe_id.'">
                     <button type="submit" name="tags" value="roti">Roti</button>
