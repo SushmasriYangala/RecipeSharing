@@ -16,7 +16,7 @@ if ($result) {
   $user_id = $row['user_id'];
 
   // Check if the currently logged-in user is the owner of the recipe
-  if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $user_id) {
+  if (isset($_SESSION['user_id'])) {
 
     // Delete the records from the favorites table
     $sql = "DELETE FROM favorites WHERE recipe_id = $recipe_id";

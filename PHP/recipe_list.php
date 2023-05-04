@@ -80,7 +80,8 @@
     echo '<form action="add_favorites.php" method="POST">';
     echo '<input type="hidden" name="recipe_id" value="' . $recipe_id . '">';
     echo '<button type="submit" name="add_to_list">Add to Favourites</button>';
-    echo '</form>';    
+    echo '</form>'; 
+    echo '<a class = "delete" href="delete_favourites.php?recipe_id=' . $recipe_id . '">Delete from favourites</a>';   
     echo '</div>'; 
     // Check if the currently logged-in user is the owner of the recipe
     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $recipe_user_id) {
@@ -88,7 +89,6 @@
       echo '<div id="edit-delete-container">';
       echo '<a class ="edit" href="edit_recipe.php?recipe_id=' . $recipe_id . '">Edit the Recipe</a><br>';
       echo '<a class = "delete" href="delete_recipe.php?recipe_id=' . $recipe_id . '">Delete the Recipe</a>';
-      echo '<a class = "delete" href="delete_favourites.php?recipe_id=' . $recipe_id . '">Delete from favourites</a>';
       echo '</div>';
     }
       

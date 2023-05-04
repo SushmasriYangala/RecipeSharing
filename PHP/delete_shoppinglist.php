@@ -16,13 +16,13 @@ if ($result) {
   $user_id = $row['user_id'];
 
   // Check if the currently logged-in user is the owner of the recipe
-  if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $user_id) {
+  if (isset($_SESSION['user_id'])) {
 
     // Delete the records from the shoppinglist table
     $sql = "DELETE FROM shoppinglist WHERE recipe_id = $recipe_id";
     if ($conn->query($sql) === TRUE) {
         echo "Shopping list records deleted successfully";
-        header("Location: shoppingdisplay.php?recipe_id=$recipe_id");
+        header("Location: shopping_list.php?recipe_id=$recipe_id");
         exit();
     } else {
         echo "Error deleting shopping list records: " .  mysqli_error($conn);
